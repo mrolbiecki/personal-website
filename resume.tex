@@ -1,0 +1,152 @@
+\documentclass{article}
+\usepackage{calc}
+\usepackage[top=1cm,bottom=1cm,right=1cm,left=1cm]{geometry}
+\usepackage{hyperref}
+\usepackage{enumitem}
+\usepackage{fontenc}
+\usepackage{tgbonum}
+\usepackage{subfiles}
+\usepackage{titlesec} 
+\usepackage{multicol}
+
+\pretolerance=10000
+\tolerance=2000
+\emergencystretch=10pt
+
+\titlespacing*{\section}{0pt}{1\baselineskip}{0.2\baselineskip}
+
+\setlist[enumerate]{topsep=0pt}
+\setlist[itemize]{noitemsep,topsep=0pt}
+
+\newlength{\remaining}
+\renewcommand{\section}[1]{%
+  \vspace{0.4em}\setlength{\remaining}{\textwidth-\widthof{\uppercase{#1}}}
+    \noindent\underline{\fontsize{9}{13}\bfseries\uppercase{#1}\hspace*{\remaining}} \\
+}
+\renewcommand{\subsection}[3]{
+    \noindent\textbf{#1} | \emph{#2} \hfill #3
+}
+\newcommand{\subsectionedu}[3]{
+	\noindent\textbf{#1}  \emph{#2} \hfill #3 \break
+}
+\pagenumbering{gobble}
+
+\begin{document}
+    \fontencoding{T1}
+    \fontfamily{phv}
+    \fontsize{9}{12}
+    \selectfont
+    \begin{center}
+        \begin{center}
+            \Huge\bfseries Marcin Rolbiecki
+            \vspace{1em}
+        \end{center}
+            \begin{tabular}{c c cc}
+                \href{tel:+48 512 540 840}{+48 512 540 840} $\bullet$ & 
+                \href{mailto:rolbieckidev@gmail.com}{rolbieckidev@gmail.com} $\bullet$ & 
+                \href{https://www.linkedin.com/in/mrolbiecki/}{linkedin/mrolbiecki} $\bullet$ & 
+                \href{https://github.com/mrolbiecki/}{github/mrolbiecki}
+        \end{tabular}
+        \vspace{1em}
+    \end{center}    
+    \vspace{-0.75em}
+
+	\section{Education}
+	\subsectionedu{University of Warsaw - Faculty of Mathematics, Informatics and Mechanics}{}{Oct 2023 - Expected Jun 2026}
+	BSc in Computer Science, Warsaw, Poland \hfill
+
+    \begin{itemize}
+        \item \textbf{Coursework:} Algorithms and Data Structures, Databases, Machine Learning, Concurrent Programming, Object-Oriented Programming, Programming in Python, Computer Networks.
+        \item \textbf{Upcoming:} Advanced Algorithms, Distributed Systems, Deep Neural Networks, Programming in Rust, Cybersecurity.
+    \end{itemize}
+
+	\vspace{0.75em}
+
+    \section{Experience}
+    \subsection{Software Engineer Intern}{Snowflake}{start in Jul 2025}
+    \begin{itemize}
+        \item I will be working on the Snowflake Drivers team.
+    \end{itemize}
+    \vspace{0.5em}
+    
+    \subsection{Junior Software Developer}{Atinea}{Jun 2024 - Jun 2025}
+    \begin{itemize}
+        \item Developed and extended a custom \textbf{SQL} query parser by implementing new features and improving maintainability.
+        \item Enhanced query execution by applying graph algorithms in the preprocessor, reducing time complexity and improving efficiency.
+        \item Adapted quickly to NianioLang, demonstrating strong aptitude for learning new programming languages and tools in response to project requirements.
+    \end{itemize}
+    \vspace{0.5em}
+
+    \subsection{Problemsetter}{Instakod}{Jun 2022 - Jun 2025}
+    \begin{itemize}
+        \item Designed problems for three editions of "Instalogik", one of Poland's largest math and programming competitions for primary school students.
+        \item Helped drive a nearly 3x increase in participation, from 6,400 to 18,100 students.
+    \end{itemize}
+    
+    \vspace{0.75em}
+
+    \section{Personal Projects and Certifications}
+    \subsection{University Projects}{University of Warsaw}{Oct 2023 - Present}
+    \begin{itemize}
+        \item Parallelized solution in \textbf{C} using \textbf{pthreads} for a combinatorial problem, focusing on \textbf{scalability} for a large number of threads. \href{https://github.com/mrolbiecki/university-projects/tree/main/concurrent-programming/parallel-combinatorics}{github link}.
+        \item \textbf{C} library for performing arithmetic operations on approximate values. \href{https://github.com/mrolbiecki/university-projects/tree/main/introductory-programming/arithmetic-of-approximate-values}{github link}.
+        \item \textbf{Concurrent} boolean circuit solver in \textbf{Java}, enabling parallel evaluation of complex boolean expressions. \href{https://github.com/mrolbiecki/university-projects/tree/main/concurrent-programming/circuit-solver}{github link}.
+        \item Data analysis project in \textbf{Python}, leveraging \textbf{pandas} and \textbf{matplotlib} to process and visualize DrugBank data. \href{https://github.com/mrolbiecki/university-projects/tree/main/python-course/data-analysis}{github link}.
+    \end{itemize}
+    \vspace{0.5em}
+
+    \subsection{Algorithms and Data Structures Solutions}{}{Aug 2021 - Present}
+    \begin{itemize}
+        \item Solved over 500 complex problems during live contests or training. \href{https://github.com/mrolbiecki/competitive-programming-solutions}{github link}.
+    \end{itemize}
+    \vspace{0.5em}
+    
+    \subsection{NVIDIA Fundamentals of Deep Learning}{Remote}{Aug 2024}
+    \begin{itemize}
+        \item Completed a workshop on deep learning fundamentals, utilizing the \textbf{PyTorch} library to train neural networks for solving real-world challenges in \textbf{computer vision} and \textbf{natural language processing}.
+    \end{itemize}
+    
+    \vspace{0.75em}
+
+    \section{Achievements}
+    \subsection{Finalist of Polish Olympiad in Informatics}{Warsaw}{Mar 2023}
+    \begin{itemize}
+        \item Ranked in the top 100 out of over 1,400 participants from the best Polish high schools, demonstrating advanced problem-solving skills in algorithms and data structures.
+    \end{itemize}
+    
+    \vspace{0.75em}
+
+    \section{Leadership / Activities}
+    \subsection{Assistant Unit Leader}{Związek Harcerstwa Rzeczypospolitej (Boy Scouts), Bytów}{Mar 2021 - Present}
+    \begin{itemize}
+        \item Co-organized multiple large-scale events, including 3 summer camps for over 100 participants, each lasting 4 weeks, enhancing team collaboration and social skills.
+        \item Led and coordinated groups of 20+ members, planning and executing complex tasks such as setting up campsites, demonstrating strong organizational and leadership abilities.
+    \end{itemize}
+
+    \subsection{Volunteering}{Various Charities}{}
+    \begin{itemize}
+        \item Regularly involved in charity work, including assisting with local charity events in my hometown and participating in high-impact initiatives, such as supporting refugees at the Polish-Ukrainian border during a humanitarian crisis.
+    \end{itemize}
+    
+    \vspace{0.75em}
+
+    \section{Skills}
+    \vspace{-1em}
+    \begin{multicols}{2}
+        \subsection{Tools and Technologies}{}{}
+        \begin{itemize}
+            \item Linux, Git, Office, MySQL, PostgreSQL, LaTeX.
+        \end{itemize}
+
+        \subsection{Languages}{}{}
+        \begin{itemize}
+            \item Polish (Native), English (C1), German (A2).
+        \end{itemize}
+
+        \subsection{Programming Languages}{}{}
+        \begin{itemize}
+            \item C++, C, Python, SQL, Java, Bash.
+            \item Quick at learning new languages as required by project needs.
+        \end{itemize}
+    \end{multicols}
+\end{document}
