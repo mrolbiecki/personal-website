@@ -58,6 +58,7 @@ body {
     box-shadow: var(--shadow-soft);
     display: flex;
     flex-direction: column;
+    min-height: max(0px, calc(100vh - 2 * clamp(1.5rem, 3vw, 3rem)));
     gap: clamp(2.5rem, 6vw, 4rem);
 }
 
@@ -276,6 +277,7 @@ body {
 }
 
 .site-footer {
+    margin-top: auto;
     text-align: center;
     font-size: 0.85rem;
     color: var(--text-muted);
