@@ -2,186 +2,57 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Marcin Rolbiecki - Software Engineer</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Marcin Rolbiecki</title>
+    <script>
+        (function () {
+            try {
+                var stored = localStorage.getItem('preferred-theme');
+                var prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+                var theme = stored || (prefersDark ? 'dark' : 'light');
+                document.documentElement.dataset.theme = theme;
+            } catch (err) {
+                document.documentElement.dataset.theme = 'light';
+            }
+        })();
+    </script>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="container">
-        <header>
-            <h1>Marcin Rolbiecki</h1>
-            <div class="contact-info">
-                <a href="tel:+48512540840">+48 512 540 840</a> •
-                <a href="mailto:rolbieckidev@gmail.com">rolbieckidev@gmail.com</a> •
-                <a href="https://www.linkedin.com/in/mrolbiecki/" target="_blank">LinkedIn</a> •
-                <a href="https://github.com/mrolbiecki/" target="_blank">GitHub</a>
-            </div>
+    <div class="page">
+        <header class="site-header">
+            <a class="brand" href="index.html" aria-label="Marcin Rolbiecki home">
+                <span class="brand-mark" aria-hidden="true">MR</span>
+                <span class="brand-name">Marcin Rolbiecki</span>
+            </a>
+            <nav class="site-nav" aria-label="Primary">
+                <a href="about.html">About</a>
+                <a href="resume.pdf" target="_blank" rel="noopener">Resume</a>
+            </nav>
+            <button class="theme-toggle" type="button" data-theme-toggle aria-label="Activate dark mode">☀︎</button>
         </header>
 
-        <main>
-            <section class="education">
-                <h2>Education</h2>
-                <div class="entry">
-                    <div class="entry-header">
-                        <h3>University of Warsaw - Faculty of Mathematics, Informatics and Mechanics</h3>
-                        <span class="date">Oct 2023 - Expected Jun 2026</span>
-                    </div>
-                    <p class="subtitle">BSc in Computer Science, Warsaw, Poland</p>
-                    <ul>
-                        <li><strong>Coursework:</strong> Algorithms and Data Structures, Databases, Machine Learning, Concurrent Programming, Object-Oriented Programming, Programming in Python, Computer Networks.</li>
-                        <li><strong>Upcoming:</strong> Advanced Algorithms, Distributed Systems, Deep Neural Networks, Programming in Rust, Cybersecurity.</li>
-                    </ul>
-                </div>
-            </section>
-
-            <section class="experience">
-                <h2>Experience</h2>
-                
-                <div class="entry">
-                    <div class="entry-header">
-                        <h3>Software Engineer Intern</h3>
-                        <span class="company">Snowflake</span>
-                        <span class="date">start in Jul 2025</span>
-                    </div>
-                    <ul>
-                        <li>I will be working on the Snowflake Drivers team.</li>
-                    </ul>
-                </div>
-
-                <div class="entry">
-                    <div class="entry-header">
-                        <h3>Junior Software Developer</h3>
-                        <span class="company">Atinea</span>
-                        <span class="date">Jun 2024 - Jun 2025</span>
-                    </div>
-                    <ul>
-                        <li>Developed and extended a custom <strong>SQL</strong> query parser by implementing new features and improving maintainability.</li>
-                        <li>Enhanced query execution by applying graph algorithms in the preprocessor, reducing time complexity and improving efficiency.</li>
-                        <li>Adapted quickly to NianioLang, demonstrating strong aptitude for learning new programming languages and tools in response to project requirements.</li>
-                    </ul>
-                </div>
-
-                <div class="entry">
-                    <div class="entry-header">
-                        <h3>Problemsetter</h3>
-                        <span class="company">Instakod</span>
-                        <span class="date">Jun 2022 - Jun 2025</span>
-                    </div>
-                    <ul>
-                        <li>Designed problems for three editions of "Instalogik", one of Poland's largest math and programming competitions for primary school students.</li>
-                        <li>Helped drive a nearly 3x increase in participation, from 6,400 to 18,100 students.</li>
-                    </ul>
-                </div>
-            </section>
-
-            <section class="projects">
-                <h2>Personal Projects and Certifications</h2>
-                
-                <div class="entry">
-                    <div class="entry-header">
-                        <h3>University Projects</h3>
-                        <span class="company">University of Warsaw</span>
-                        <span class="date">Oct 2023 - Present</span>
-                    </div>
-                    <ul>
-                        <li>Parallelized solution in <strong>C</strong> using <strong>pthreads</strong> for a combinatorial problem, focusing on <strong>scalability</strong> for a large number of threads. <a href="https://github.com/mrolbiecki/university-projects/tree/main/concurrent-programming/parallel-combinatorics" target="_blank">GitHub link</a>.</li>
-                        <li><strong>C</strong> library for performing arithmetic operations on approximate values. <a href="https://github.com/mrolbiecki/university-projects/tree/main/introductory-programming/arithmetic-of-approximate-values" target="_blank">GitHub link</a>.</li>
-                        <li><strong>Concurrent</strong> boolean circuit solver in <strong>Java</strong>, enabling parallel evaluation of complex boolean expressions. <a href="https://github.com/mrolbiecki/university-projects/tree/main/concurrent-programming/circuit-solver" target="_blank">GitHub link</a>.</li>
-                        <li>Data analysis project in <strong>Python</strong>, leveraging <strong>pandas</strong> and <strong>matplotlib</strong> to process and visualize DrugBank data. <a href="https://github.com/mrolbiecki/university-projects/tree/main/python-course/data-analysis" target="_blank">GitHub link</a>.</li>
-                    </ul>
-                </div>
-
-                <div class="entry">
-                    <div class="entry-header">
-                        <h3>Algorithms and Data Structures Solutions</h3>
-                        <span class="date">Aug 2021 - Present</span>
-                    </div>
-                    <ul>
-                        <li>Solved over 500 complex problems during live contests or training. <a href="https://github.com/mrolbiecki/competitive-programming-solutions" target="_blank">GitHub link</a>.</li>
-                    </ul>
-                </div>
-
-                <div class="entry">
-                    <div class="entry-header">
-                        <h3>NVIDIA Fundamentals of Deep Learning</h3>
-                        <span class="company">Remote</span>
-                        <span class="date">Aug 2024</span>
-                    </div>
-                    <ul>
-                        <li>Completed a workshop on deep learning fundamentals, utilizing the <strong>PyTorch</strong> library to train neural networks for solving real-world challenges in <strong>computer vision</strong> and <strong>natural language processing</strong>.</li>
-                    </ul>
-                </div>
-            </section>
-
-            <section class="achievements">
-                <h2>Achievements</h2>
-                <div class="entry">
-                    <div class="entry-header">
-                        <h3>Finalist of Polish Olympiad in Informatics</h3>
-                        <span class="company">Warsaw</span>
-                        <span class="date">Mar 2023</span>
-                    </div>
-                    <ul>
-                        <li>Ranked in the top 100 out of over 1,400 participants from the best Polish high schools, demonstrating advanced problem-solving skills in algorithms and data structures.</li>
-                    </ul>
-                </div>
-            </section>
-
-            <section class="leadership">
-                <h2>Leadership / Activities</h2>
-                
-                <div class="entry">
-                    <div class="entry-header">
-                        <h3>Assistant Unit Leader</h3>
-                        <span class="company">Związek Harcerstwa Rzeczypospolitej (Boy Scouts), Bytów</span>
-                        <span class="date">Mar 2021 - Present</span>
-                    </div>
-                    <ul>
-                        <li>Co-organized multiple large-scale events, including 3 summer camps for over 100 participants, each lasting 4 weeks, enhancing team collaboration and social skills.</li>
-                        <li>Led and coordinated groups of 20+ members, planning and executing complex tasks such as setting up campsites, demonstrating strong organizational and leadership abilities.</li>
-                    </ul>
-                </div>
-
-                <div class="entry">
-                    <div class="entry-header">
-                        <h3>Volunteering</h3>
-                        <span class="company">Various Charities</span>
-                    </div>
-                    <ul>
-                        <li>Regularly involved in charity work, including assisting with local charity events in my hometown and participating in high-impact initiatives, such as supporting refugees at the Polish-Ukrainian border during a humanitarian crisis.</li>
-                    </ul>
-                </div>
-            </section>
-
-            <section class="skills">
-                <h2>Skills</h2>
-                <div class="skills-grid">
-                    <div class="skill-category">
-                        <h3>Programming Languages</h3>
-                        <ul>
-                            <li>C++, C, Python, SQL, Java, Bash</li>
-                            <li>Quick at learning new languages as required by project needs</li>
-                        </ul>
-                    </div>
-                    <div class="skill-category">
-                        <h3>Tools and Technologies</h3>
-                        <ul>
-                            <li>Linux, Git, Office, MySQL, PostgreSQL, LaTeX</li>
-                        </ul>
-                    </div>
-                    <div class="skill-category">
-                        <h3>Languages</h3>
-                        <ul>
-                            <li>Polish (Native), English (C1), German (A2)</li>
-                        </ul>
-                    </div>
+        <main class="hero">
+            <figure class="hero-portrait">
+                <div class="portrait" role="img" aria-label="Portrait of Marcin Rolbiecki"></div>
+            </figure>
+            <section class="hero-content">
+                <h1>Software engineer in progress.</h1>
+                <p>
+                    I am Marcin Rolbiecki, a computer science student crafting thoughtful, resilient software with a
+                    focus on clear communication and meaningful impact.
+                </p>
+                <div class="hero-actions">
+                    <a class="button primary" href="resume.pdf" target="_blank" rel="noopener">View résumé</a>
+                    <a class="button ghost" href="about.html">About me</a>
                 </div>
             </section>
         </main>
 
-        <footer>
-            <p>&copy; 2025 Marcin Rolbiecki. All rights reserved.</p>
+        <footer class="site-footer">
+            <p>© 2024 Marcin Rolbiecki. All rights reserved.</p>
         </footer>
     </div>
+    <script src="theme.js"></script>
 </body>
 </html>
